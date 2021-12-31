@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!-- saved from url=(0024)http://localhost:3000/#/ -->
+<html lang="en" class="reveal-full-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title></title>
+    <link rel="shortcut icon" href="http://localhost:3000/favicon.ico">
+    <link rel="stylesheet" href="./localhost_files/reveal.css">
+    <link rel="stylesheet" href="./localhost_files/black.css" id="theme">
+    <link rel="stylesheet" href="./localhost_files/zenburn.css">
+
+	<link rel="stylesheet" href="./localhost_files/layout.css">
+
+	<script type="text/javascript">
+		function onPopState(event) {
+			parent.postMessage(event.target.location.href, "app://obsidian.md");
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+		}
+        </script>
+  <style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><script type="text/javascript" src="./localhost_files/MathJax.js.Download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888; display: contents}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover, .MJXp-munder {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > *, .MJXp-munder > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none; box-sizing: content-box}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_test {font-style: normal; font-weight: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow: hidden; height: 1px}
+.MathJax_test.mjx-test-display {display: table!important}
+.MathJax_test.mjx-test-inline {display: inline!important; margin-right: -1px}
+.MathJax_test.mjx-test-default {display: block!important; clear: both}
+.MathJax_ex_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60ex}
+.MathJax_em_box {display: inline-block!important; position: absolute; overflow: hidden; min-height: 0; max-height: none; padding: 0; border: 0; margin: 0; width: 1px; height: 60em}
+.mjx-test-inline .MathJax_left_box {display: inline-block; width: 0; float: left}
+.mjx-test-inline .MathJax_right_box {display: inline-block; width: 0; float: right}
+.mjx-test-display .MathJax_right_box {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.9') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.9') format('opentype')}
+.MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+  <body class="reveal-viewport" style="transition: -webkit-transform 0.8s ease 0s; --slide-width:1920px; --slide-height:1200px;"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+    <div class="reveal slide center focused has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade" style="cursor: none;">
+      <div class="slides" style="width: 1920px; height: 1200px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.433333);"><section data-markdown="" data-markdown-parsed="true" class="drop present" data-background-image="https://picsum.photos/id/177/2515/1830" style="top: 0px; display: block;"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; padding: 250px 0 250px 800px; box-sizing: border-box; position: fixed; left: 384px; top: 240px; height: 960px; width: 1536px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+
+<h1 id="minml-" style="letter-spacing: 1.5rem">Minml <!-- --></h1>
+<h5 id="modern-presentation-template">Modern Presentation Template</h5>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 0px; display: block;" hidden="" aria-hidden="true"><!-- --> 
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 0px; top: 180px; height: 1020px; width: 1555.2px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div> 
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; padding: 50px; box-sizing: border-box; position: fixed; left: 0px; top: 180px; height: 1020px; width: 518.4px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+ 
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1005-500x400.jpg" alt=""></p>
+
+<p><strong>Agenda 01</strong> 
+<strong style="font-size: 24px">Lorem Ipsum</strong>
+is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s<!-- --> </p>
+</div> 
+
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; padding: 50px; box-sizing: border-box; position: fixed; left: 518.4px; top: 180px; height: 1020px; width: 518.4px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+ 
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1010-500x400.jpg" alt=""></p>
+
+<p><strong>Agenda 02</strong>
+<strong style="font-size: 24px">Lorem Ipsum</strong>
+is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s<!-- --> </p></div> <p></p>
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; padding: 50px; box-sizing: border-box; position: fixed; left: 1036.8px; top: 180px; height: 1020px; width: 518.4px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+ 
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1025-500x400.jpg" alt=""></p>
+
+<p><strong>Agenda 03</strong> <strong style="font-size: 24px">Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s<!-- --> </p>
+</div> 
+
+<p style="color: black; font-size: 88px; transform: rotate(90deg); position: fixed; left: 1094.3999999999999px; top: 576px; height: 240px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin">Presentation Agenda </p>
+<!-- --> 
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 0px; display: block;" hidden="" aria-hidden="true"><!-- -->
+<h2 id="the-abnormal-design-agency" style="position: fixed; left: 1152px; top: 36px; height: 420px; width: 576px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" class="reset-margin" align="left">The abnormal design agency<!-- --></h2>
+<p style="position: fixed; left: 499.2px; top: 144px; height: 420px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"><img src="./localhost_files/110-600x400.jpg" alt=""></p>
+
+<!-- --> 
+<h6 id="minimo-studio" style="position: fixed; left: 211.2px; top: 660px; height: 60px; width: 288px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" class="reset-margin" align="left">Minimo Studio<!-- --></h6>
+<p style="font-size: 24px; position: fixed; left: 211.2px; top: 696px; height: 360px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <!-- --> </p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/112-500x400.jpg" alt="" style="position: fixed; left: 902.4px; top: 480px; height: 540px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 96px; top: 0px; height: 1200px; width: 672px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div>
+<div class="reset-margin" style="transform: rotate(-90deg); position: fixed; left: -192px; top: 480px; height: 240px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h1 id="the-story-of-us">The Story of Us</h1>
+<h5 id="a-few-words-about-the-studio">A few words about the Studio</h5>
+</div> 
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1068-600x400.jpg" alt="" style="position: fixed; left: 537.6px; top: 120px; height: 480px; width: 614.4px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/113-600x400.jpg" alt="" style="position: fixed; left: 537.6px; top: 600px; height: 480px; width: 614.4px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<p style="font-size: 24px; position: fixed; left: 1248px; top: 660px; height: 360px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.<!-- -->
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <!-- --> </p>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="reset-margin" style="position: fixed; left: 192px; top: 300px; height: 600px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<p><strong style="font-size: 79px">Stephanie Poetri</strong><!-- -->
+<em style="font-size: 28px">Brand Consultant</em>
+<br><br>
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <!-- --> </p>
+</div> 
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 998.4px; top: 216px; height: 840px; width: 672px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div> 
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/21-450x400.jpg" alt="" style="position: fixed; left: 940.8px; top: 276px; height: 720px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<h1 id="founder" style="transform: rotate(90deg); position: fixed; left: 1305.6px; top: 576px; height: 120px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin">Founder<!-- --></h1>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="reset-margin" style="padding: 0 30px; box-sizing: border-box; position: fixed; left: 268.8px; top: 120px; height: 180px; width: 1382.3999999999999px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h1 id="values">Values</h1>
+<h5 id="a-few-words-about-values">A few words about values</h5>
+</div>
+<div class="reset-margin" style="padding: 0 30px; box-sizing: border-box; position: fixed; left: 268.8px; top: 540px; height: 660px; width: 460.79999999999995px; display: flex; flex-direction: column; align-items: center; justify-content: space-between" align="justify">
+
+<h5 id="value-01"><strong>Value 01</strong></h5>
+<p style="font-size: 20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<!-- --></p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/225-460x360.jpg" alt="" style="max-height: 100%; max-width: 100%"></p>
+
+</div>
+<div class="reset-margin" style="padding: 0 30px; box-sizing: border-box; position: fixed; left: 729.6px; top: 540px; height: 660px; width: 460.79999999999995px; display: flex; flex-direction: column; align-items: center; justify-content: space-between" align="justify">
+
+<h5 id="value-02"><strong>Value 02</strong></h5>
+<p style="font-size: 20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/24-460x360.jpg" alt="" style="max-height: 100%; max-width: 100%"></p>
+
+</div>
+<div class="reset-margin" style="padding: 0 30px; box-sizing: border-box; position: fixed; left: 1190.3999999999999px; top: 540px; height: 660px; width: 460.79999999999995px; display: flex; flex-direction: column; align-items: center; justify-content: space-between" align="justify">
+
+<h5 id="value-03"><strong>Value 03</strong></h5>
+<p style="font-size: 20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/26-460x360.jpg" alt="" style="max-height: 100%; max-width: 100%"></p>
+
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="reset-margin" style="padding: 0 30px; box-sizing: border-box; position: fixed; left: 96px; top: 300px; height: 480px; width: 614.4px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h1 id="our-vision">Our Vision</h1>
+<h4 id="we-turn-cultural-value-into-company-value">We turn cultural Value, into company Value</h4>
+</div>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/548-460x360.jpg" alt="" style="position: fixed; left: 768px; top: 216px; height: 744px; width: 864px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<p style="font-size: 24px; background-color: #EEB73F; padding: 50px; box-sizing: border-box; position: fixed; left: 1248px; top: 600px; height: 480px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="has-light-background reset-margin" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <!-- --></p>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 0px; top: 0px; height: 1200px; width: 422.4px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+</div>
+<div class="reset-margin" style="transform: rotate(-90deg); position: fixed; left: -288px; top: 480px; height: 240px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h2 id="meet-the-expert">Meet the Expert</h2>
+<h5 id="studio-partners">Studio Partners</h5>
+</div>
+<div class="reset-margin" style="position: fixed; left: 1152px; top: 144px; height: 120px; width: 288px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h5 id="killie-groover-branding-specialist-" style="font-size: 24px">Killie Groover Branding Specialist <!-- --></h5>
+</div>
+<div class="reset-margin" style="position: fixed; left: 576px; top: 540px; height: 120px; width: 288px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h5 id="erik-keagan-creative-director-" style="font-size: 24px">Erik Keagan Creative Director <!-- --></h5>
+</div>
+<div class="reset-margin" style="position: fixed; left: 1152px; top: 936px; height: 120px; width: 288px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h5 id="haley-gideon-marketing-expert-" style="font-size: 24px">Haley Gideon Marketing Expert <!-- --></h5>
+</div>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1005-300x300.jpg" alt="" style="position: fixed; left: 1440px; top: 60px; height: 300px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1010-300x300.jpg" alt="" style="position: fixed; left: 864px; top: 444px; height: 300px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1025-300x300.jpg" alt="" style="position: fixed; left: 1440px; top: 840px; height: 300px; width: 288px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 96px; top: 0px; height: 1200px; width: 1209.6px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/64-300x300.jpg" alt="" style="position: fixed; left: 806.4000000000001px; top: 144px; height: 840px; width: 768px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<div class="reset-margin" style="position: fixed; left: 192px; top: 444px; height: 540px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<h5 id="emily-oberman"><em>Emily Oberman</em></h5>
+<p style="font-size: 24px">LoremIpsumLoremIpsum<!-- -->
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <!-- --></p>
+</div>
+
+<h3 id="editorial-designer" style="position: fixed; left: 1363.1999999999998px; top: 300px; height: 120px; width: 537.6px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin">Editorial Designer<!-- --></h3>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 0px; top: 600px; height: 600px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/659-300x300.jpg" alt="" style="position: fixed; left: 384px; top: 144px; height: 840px; width: 768px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<div class="reset-margin" style="transform: rotate(-90deg); position: fixed; left: 96px; top: 732px; height: 96px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<h5 id="michel-bierut"><em>Michel Bierut</em></h5>
+<p style="font-size: 24px">LoremIpsumLoremIpsum <!-- --></p>
+</div>
+<div class="reset-margin" style="position: fixed; left: 1248px; top: 240px; height: 480px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<h3 id="graphic-designer">Graphic Designer</h3>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. <!-- --></p>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop future" data-background-image="https://picsum.photos/id/733/5464/3643" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; padding: 100px 100px 100px 250px; box-sizing: border-box; position: fixed; left: 96px; top: 0px; height: 1200px; width: 864px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h5 id="your-service">Your Service</h5>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+<h5 id="your-service-1">Your Service</h5>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+<h5 id="your-service-2">Your Service</h5>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+<h5 id="your-service-3">Your Service</h5>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+<div class="reset-margin" style="padding: 50px 0; box-sizing: border-box; position: fixed; left: 96px; top: 0px; height: 1200px; width: 249.6px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/755-100x100.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/755-100x100.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/755-100x100.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/755-100x100.jpg" alt=""></p>
+
+</div>
+<div class="reset-margin" style="color: #000; position: fixed; left: 1190.3999999999999px; top: 240px; height: 240px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<h2 id="what-we-do" style="color: #000">What we do<!-- --></h2>
+<p style="font-size: 28px">We help you create, grow and foster connections with your customers. And we think we're pretty good at it. <!-- --></p>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 96px; top: 0px; height: 1200px; width: 1209.6px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div>
+
+<p style="font-size: 28px; padding: 50px; box-sizing: border-box; position: fixed; left: 115.19999999999999px; top: 576px; height: 360px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin">We help you create, grow and foster connections with your customers. And we think we're pretty good at it. <!-- --></p>
+<div class="reset-margin" style="position: fixed; left: 480px; top: 0px; height: 1200px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/756-400x300.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/76-400x300.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/760-400x300.jpg" alt=""></p>
+
+
+</div>
+
+<h1 id="our-services" style="transform: rotate(-90deg); position: fixed; left: 729.6px; top: 552px; height: 120px; width: 768px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin">Our Services<!-- --></h1>
+<div class="reset-margin" style="padding: 150px 50px; box-sizing: border-box; position: fixed; left: 1344px; top: 0px; height: 1200px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h6 id="branding">Branding</h6>
+<p style="font-size: 20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard <!-- --></p>
+<p><br><br></p>
+<h6 id="marketing">Marketing</h6>
+<p style="font-size: 20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard <!-- -->
+<br><br></p>
+<h6 id="consulting">Consulting</h6>
+<p style="font-size: 20px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard <!-- --></p>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; padding: 100px 180px 100px 250px; box-sizing: border-box; position: fixed; left: 960px; top: 0px; height: 1200px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<h5 id="your-service">Your Service</h5>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+<h5 id="your-service-1">Your Service</h5>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+<h5 id="your-service-2">Your Service</h5>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+<h5 id="your-service-3">Your Service</h5>
+<p style="font-size: 24px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/885-800x1220.jpg" alt="" style="max-height: 100%; max-width: 100%; position: fixed; left: 192px; top: 120px; height: 960px; width: 768px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<div class="has-light-background reset-margin" style="background-color: white; padding: 26px; box-sizing: border-box; opacity: 0.5; position: fixed; left: 345.59999999999997px; top: 480px; height: 480px; width: 518.4px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div>
+<div class="reset-margin" style="padding: 26px; box-sizing: border-box; position: fixed; left: 345.59999999999997px; top: 480px; height: 480px; width: 518.4px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h2 id="work-process-lorem-ipsum-is-simply-dummy-text-of-the-printing-and-typesetting-industry-lorem-ipsum-has-been-the-industrys-standard-dummy-text-ever-since-the-1500s-when-an-unknown-printer-took-a-galley-of-type-and-scrambled-it-to-make-a-type-specimen-book-" style="font-size: 28px" align="justify">Work Process Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. <!-- --></h2>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 0px; top: 0px; height: 1200px; width: 768px; display: flex; flex-direction: column; align-items: center; justify-content: center">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/756-400x300.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/76-400x300.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/760-400x300.jpg" alt=""></p>
+
+</div>
+<div class="reset-margin" style="padding: 130px 85px; box-sizing: border-box; position: fixed; left: 768px; top: 0px; height: 1200px; width: 768px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h3 id="keep-it-simple">Keep it Simple</h3>
+<p style="font-size: 24px; padding: 0 60px 0 0; box-sizing: border-box" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<!-- --></p>
+<h3 id="keep-it-real">Keep it real</h3>
+<p style="font-size: 24px; padding: 0 60px 0 0; box-sizing: border-box" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<!-- --></p>
+<h3 id="quality-over-quantity">Quality over Quantity</h3>
+<p style="font-size: 24px; padding: 0 60px 0 0; box-sizing: border-box" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<!-- --></p>
+</div>
+<div class="reset-margin" style="transform: rotate(90deg); position: fixed; left: 1152px; top: 516px; height: 180px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h1 id="business-strategy">Business Strategy</h1>
+<h4 id="a-few-words-about-strategy">A few words about strategy</h4>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="reset-margin" style="padding: 100px 0; box-sizing: border-box; position: fixed; left: 0px; top: 0px; height: 360px; width: 1920px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h5 id="marketing-speciality">Marketing Speciality</h5>
+<h2 id="success-marketing">Success Marketing</h2>
+</div>
+<div class="has-light-background reset-margin flex-even" style="background-color: #EEB73F; padding: 0 160px; box-sizing: border-box; position: fixed; left: 0px; top: 360px; height: 840px; width: 1920px; display: flex; flex-direction: row; align-items: flex-start; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/978-450x700.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/996-450x700.jpg" alt=""></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1011-450x700.jpg" alt=""></p>
+
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="#EEB73F" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="reset-margin" style="position: fixed; left: 0px; top: 0px; height: 1200px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1015-576x1200.jpg" alt="" style="max-width: 100%; max-height: 100%"></p>
+
+</div>
+<div class="reset-margin" style="padding: 100px; box-sizing: border-box; position: fixed; left: 576px; top: 0px; height: 600px; width: 672px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h2 id="strength">Strength</h2>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+<div class="reset-margin" style="padding: 100px; box-sizing: border-box; position: fixed; left: 1248px; top: 0px; height: 600px; width: 672px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h2 id="weakness">Weakness</h2>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+<div class="reset-margin" style="padding: 100px; box-sizing: border-box; position: fixed; left: 576px; top: 600px; height: 600px; width: 672px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h2 id="threat">Threat</h2>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+<div class="reset-margin" style="padding: 100px; box-sizing: border-box; position: fixed; left: 1248px; top: 600px; height: 600px; width: 672px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h2 id="opportunity">Opportunity</h2>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="reset-margin" style="padding: 150px; box-sizing: border-box; position: fixed; left: 0px; top: 300px; height: 600px; width: 768px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h1 id="clients">Clients</h1>
+<p style="font-size: 28px" align="justify">These brands aren't trophies, they're friends we've met on our journey.<!-- --></p>
+</div>
+<div class="reset-margin" style="position: fixed; left: 768px; top: 0px; height: 1200px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/1023-1152x1200.jpg" alt="" style="max-width: 100%; max-height: 100%"></p>
+
+</div>
+<div class="has-light-background reset-margin" style="background-color: white; opacity: 0.5; position: fixed; left: 960px; top: 180px; height: 840px; width: 768px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div>
+<div class="reset-margin" style="padding: 50px; box-sizing: border-box; position: fixed; left: 960px; top: 180px; height: 420px; width: 384px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h4 id="reuters">Reuters</h4>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+<div class="reset-margin" style="padding: 50px; box-sizing: border-box; position: fixed; left: 1344px; top: 180px; height: 420px; width: 384px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h4 id="espn">Espn</h4>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+<div class="reset-margin" style="padding: 50px; box-sizing: border-box; position: fixed; left: 960px; top: 600px; height: 420px; width: 384px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h4 id="visa">Visa</h4>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+<div class="reset-margin" style="padding: 50px; box-sizing: border-box; position: fixed; left: 1344px; top: 600px; height: 420px; width: 384px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<h4 id="guardian">Guardian</h4>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s <!-- --></p>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; padding: 100px 300px; box-sizing: border-box; position: fixed; left: 0px; top: 0px; height: 1200px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h1 id="40">40</h1>
+<h4 id="clients">Clients</h4>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <!-- --></p>
+<h1 id="60">60</h1>
+<h4 id="projects">Projects</h4>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <!-- --></p>
+<h1 id="29">29</h1>
+<h4 id="apps--websites">Apps &amp; Websites</h4>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <!-- --></p>
+</div>
+<div class="reset-margin" style="position: fixed; left: 960px; top: 0px; height: 1200px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/141-960x1200.jpg" alt="" style="max-width: 100%; max-height: 100%"></p>
+
+</div>
+<div class="reset-margin" style="position: fixed; left: 960px; top: 60px; height: 480px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h1 id="ourachievments">Our<br>Achievments</h1>
+<h5 id="success-in-numbers">success in numbers</h5>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="reset-margin" style="position: fixed; left: 0px; top: 120px; height: 480px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/145-480x480.jpg" alt="" style="max-width: 100%; max-height: 100%"></p>
+
+</div>
+<div class="reset-margin" style="position: fixed; left: 480px; top: 120px; height: 480px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/146-480x480.jpg" alt="" style="max-width: 100%; max-height: 100%"></p>
+
+</div>
+<div class="reset-margin" style="position: fixed; left: 960px; top: 120px; height: 480px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/175-480x480.jpg" alt="" style="max-width: 100%; max-height: 100%"></p>
+
+</div>
+<div class="reset-margin" style="position: fixed; left: 96px; top: 600px; height: 480px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h3 id="basic">Basic</h3>
+<h1 id="-299">$ 299</h1>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <!-- --></p>
+</div>
+<div class="reset-margin" style="padding: 0 10px 0 20px; box-sizing: border-box; position: fixed; left: 518.4px; top: 600px; height: 480px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h3 id="premium">Premium</h3>
+<h1 id="-499">$ 499</h1>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <!-- --></p>
+</div>
+<div class="reset-margin" style="position: fixed; left: 960px; top: 600px; height: 480px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h3 id="pro">Pro</h3>
+<h1 id="-799">$ 799</h1>
+<p style="font-size: 24px" align="justify">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been <!-- --></p>
+</div>
+<div class="reset-margin" style="transform: rotate(90deg); position: fixed; left: 1075.2px; top: 516px; height: 180px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h1 id="pricing-table">Pricing Table</h1>
+<h4 id="subscription-packages">Subscription packages</h4>
+</div>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop has-light-background future" data-background-color="white" style="top: 600px; display: none;" hidden="" aria-hidden="true"><!-- -->
+<div class="has-light-background reset-margin" style="background-color: #EEB73F; position: fixed; left: 0px; top: 0px; height: 1200px; width: 1728px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+</div>
+
+<p><em style="position: fixed; left: 192px; top: 216px; height: 60px; width: 384px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" class="reset-margin" align="left">Keep the text simply</em> <!-- --></p>
+<div class="reset-margin" style="position: fixed; left: 96px; top: 480px; height: 480px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./localhost_files/183-1200x900.jpg" alt=""></p>
+
+</div>
+
+<h1 id="its-a-break-section-" style="position: fixed; left: 1248px; top: 696px; height: 360px; width: 576px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" class="reset-margin" align="left">It's a break section <!-- --></h1>
+</section></div>
+    <div class="backgrounds"><div class="slide-background drop present" data-background-hash="0https://picsum.photos/id/177/2515/1830nullnullnullnullnullnullnull" data-loaded="true" style="display: block;"><div class="slide-background-content" style="background-image: url(&quot;https://picsum.photos/id/177/2515/1830&quot;);"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background drop future" data-background-hash="0https://picsum.photos/id/733/5464/3643nullnullnullnullnullnullnull" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0#EEB73Fnullnullnullnull" style="background-color: rgb(238, 183, 63); display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div><div class="slide-background has-light-background drop future" data-background-hash="0whitenullnullnullnull" style="background-color: white; display: none;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="http://localhost:3000/#/">
+					<span class="slide-number-a">1</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Minml Modern Presentation Template </div></div>
+
+    <script src="./localhost_files/reveal.js.Download"></script>
+
+    <script src="./localhost_files/markdown.js.Download"></script>
+    <script src="./localhost_files/highlight.js.Download"></script>
+    <script src="./localhost_files/zoom.js.Download"></script>
+    <script src="./localhost_files/notes.js.Download"></script>
+    <script src="./localhost_files/math.js.Download"></script>
+	<script src="./localhost_files/mermaid.js.Download"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath,
+		  RevealMermaid
+        ]
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"slideNumber":true,"transition":"slide"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  
+
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size1, monospace;"></div></div></body></html>
