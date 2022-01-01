@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- saved from url=(0024)http://localhost:3000/#/ -->
+<!-- saved from url=(0025)http://localhost:3000/#/4 -->
 <html lang="en" class="reveal-full-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -22,8 +22,21 @@
 				window.document.location.reload();
 			}
 		}
+
+		document.onreadystatechange = () => {
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
         </script>
-  <style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_HTML-full"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+  <style type="text/css">.hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}</style><script type="text/javascript" src="./inklusive_bewegungsspiele_files/MathJax.js.Download"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
 .MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
 .MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
 .MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
@@ -157,26 +170,26 @@ img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!importan
 @font-face {font-family: MathJax_Size4; src: url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.9') format('woff'), url('https://cdn.jsdelivr.net/npm/mathjax@2/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.9') format('opentype')}
 .MathJax .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
 </style></head>
-  <body style="transition: -webkit-transform 0.8s ease 0s; --slide-width:1920px; --slide-height:1200px;" class="reveal-viewport"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
-    <div class="reveal slide center focused has-horizontal-slides ready" role="application" data-transition-speed="slow" data-background-transition="fade" style="">
-      <div class="slides" style="width: 1920px; height: 1200px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.553333);"><section data-markdown="" data-markdown-parsed="true" class="drop present" style="top: 0px; display: block;"><p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita1.jpg" alt="" style="position: fixed; left: 0px; top: 24px; height: 1200px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+  <body class="reveal-viewport" style="transition: -webkit-transform 0.8s ease 0s; --slide-width:1920px; --slide-height:1200px;"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div>
+    <div class="reveal slide center focused has-vertical-slides has-horizontal-slides ready" role="application" data-transition-speed="slow" data-background-transition="fade" style="cursor: none;">
+      <div class="slides" style="width: 1920px; height: 1200px; inset: 50% auto auto 50%; transform: translate(-50%, -50%) scale(0.553333);"><section data-markdown="" data-markdown-parsed="true" class="drop past" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="0"><p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita1.jpg" alt="" style="position: absolute; left: 0px; top: 24px; height: 1200px; min-height: 1200px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
 
-<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita2.jpg" alt="" style="position: fixed; left: 403.2px; top: 24px; height: 1200px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita2.jpg" alt="" style="position: absolute; left: 403.2px; top: 24px; height: 1200px; min-height: 1200px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
 
-<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita3.jpg" alt="" style="position: fixed; left: 806.4px; top: 24px; height: 480px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita3.jpg" alt="" style="position: absolute; left: 806.4px; top: 24px; height: 480px; min-height: 480px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
 
-<div class="has-light-background reset-margin" style="background-color: white; padding: 30px; box-sizing: border-box; position: fixed; left: 806.4px; top: 576px; height: 180px; width: 1094.3999999999999px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+<div class="has-light-background reset-margin" style="background-color: white; padding: 30px; box-sizing: border-box; position: absolute; left: 806.4px; top: 576px; height: 180px; min-height: 180px; width: 1094.3999999999999px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
 
 <h1 id="inklusive-bewegungsspiele" style="font-size: 120px">Inklusive Bewegungsspiele<!-- --></h1>
 </div>
-<div class="has-light-background reset-margin flex-even" style="background-color: #FFFFFF00; position: fixed; left: 652.8px; top: 984px; height: 180px; width: 1286.3999999999999px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
+<div class="has-light-background reset-margin flex-even" style="background-color: #FFFFFF00; position: absolute; left: 652.8px; top: 984px; height: 180px; min-height: 180px; width: 1286.3999999999999px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly">
 
 <h1 id="marc-bielert" style="font-size: 40px">Marc Bielert<!-- --></h1>
 <h1 id="eigenarts-halle" style="font-size: 40px">EigenArts Halle<!-- --></h1>
 </div>
 
 <!-- -->
-</section><section data-markdown="" data-markdown-parsed="true" class="drop future" style="top: 0px; display: block;" hidden="" aria-hidden="true"><div class="has-light-background reset-margin" style="background-color: white; padding: 60px; box-sizing: border-box; position: fixed; left: 0px; top: 0px; height: 1200px; width: 1920px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+</section><section data-markdown="" data-markdown-parsed="true" class="drop past" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="1"><div class="has-light-background reset-margin" style="background-color: white; padding: 60px; box-sizing: border-box; position: absolute; left: 0px; top: 0px; height: 1200px; min-height: 1200px; width: 1920px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
 
 <h1 id="inhalt">Inhalt</h1>
 <ul>
@@ -193,23 +206,168 @@ img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!importan
 <li>  (Solo) Soziale Aktivitäten</li></ul></div>
 
 <!-- -->
-</section><section data-markdown="" data-markdown-parsed="true" class="drop future" style="top: 0px; display: block;" hidden="" aria-hidden="true"><div class="has-light-background reset-margin" style="background-color: white; padding: 60px; box-sizing: border-box; position: fixed; left: 0px; top: 0px; height: 1200px; width: 1920px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+</section><section data-markdown="" data-markdown-parsed="true" class="drop past" style="top: 0px; display: block;" hidden="" aria-hidden="true" data-index-h="2"><p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/neustadt01.jpg" alt="" style="position: absolute; left: 0px; top: 0px; height: 480px; min-height: 480px; width: 748.8px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/neustadt02.jpg" alt="" style="position: absolute; left: 768px; top: 0px; height: 1140px; min-height: 1140px; width: 1344px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 60px; box-sizing: border-box; position: absolute; left: 0px; top: 480px; height: 240px; min-height: 240px; width: 729.6px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<h1 id="einführung">Einführung</h1>
+</div>
+
+<!-- -->
+</section><section data-markdown="" data-markdown-parsed="true" class="drop past" style="top: 0px; display: block;" hidden="" aria-hidden="true" data-index-h="3"><p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Bewegungslabor.png" alt="" style="position: absolute; left: 96px; top: 60px; height: 1020px; min-height: 1020px; width: 1728px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+
+<!-- -->
+</section><section data-markdown="" data-markdown-parsed="true" class="drop present" style="top: 0px; display: block;" data-fragment="-1" data-index-h="4"><div class="has-light-background reset-margin" style="background-color: white; padding: 60px; box-sizing: border-box; position: absolute; left: 0px; top: 0px; height: 1200px; min-height: 1200px; width: 1920px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
 
 <h2 id="warum-inklusive-bewegungsspiele">Warum Inklusive Bewegungsspiele?</h2>
 <ul>
 <li class="fragment" data-fragment-index="0">  Inklusiv: Jeder Mensch, egal welchen Alters oder mit welchen Einschränkungen<!-- --></li>
 <li class="fragment" data-fragment-index="1">  Alltagsrelevante Bewegungsförderung<!-- --></li>
 <li class="fragment" data-fragment-index="2">  Spiele ermöglichen eine hohe Zahl an Bewegungs - Wiederholungen ohne das die Motivation diese auszuführen sinkt<!-- --></li>
-<li class="fragment" data-fragment-index="3">  anpassbar an individuelle Ziele der Bewegungsförderung<!-- --></li></ul></div>
-<!-- -->
+<li class="fragment" data-fragment-index="3">  Anpassbar an individuelle Ziele der Bewegungsförderung<!-- --></li></ul></div>
 
-</section></div>
-    <div class="backgrounds"><div class="slide-background drop present" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background drop future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background drop future" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div></div><div class="slide-number" style="display: block;"><a href="http://localhost:3000/#/">
-					<span class="slide-number-a">1</span>
-					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button>
-			<button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button>
+<!-- -->
+</section><section data-markdown="" data-markdown-parsed="true" style="top: 461px; display: block;" class="future" hidden="" aria-hidden="true" data-index-h="5"><h1 id="methode-des--functional-juggling"><strong>Methode des&nbsp; Functional Juggling</strong></h1>
+<h1 id="entstehung-und-überblick"><strong>Entstehung und Überblick</strong></h1>
+</section><section data-markdown="" data-markdown-parsed="true" class="drop future" style="top: 0px; display: block;" hidden="" aria-hidden="true" data-index-h="6"><p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/craig.jpg" alt="" style="position: absolute; left: 0px; top: 60px; height: 960px; min-height: 960px; width: 1344px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<div class="has-dark-background reset-margin" style="background-color: #FF0000; padding: 20px; box-sizing: border-box; position: absolute; left: 960px; top: 480px; height: 600px; min-height: 600px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<ul>
+<li>  Craig Quat</li>
+<li>  entwickelte die Methodik ca. 2010</li>
+<li>  zusammenarbeit mit Kliniken, Neurowissenschaftler*innen, Therapiezentren </li>
+<li>  Gründung des “Collective”-Netzwerk in mittlerweile über 20 Ländern</li></ul></div>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/images.png" alt="" style="position: absolute; left: 1152px; top: 60px; height: 240px; min-height: 240px; width: 768px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+
+<!-- -->
+</section><section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true" data-index-h="7"><section data-markdown="" data-markdown-parsed="true" class="drop past" data-background-image="/Bilder/46514050_584083148712701_263200109909508096_n.jpg" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="7" data-index-v="0"><!-- -->
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF55; padding: 60px; box-sizing: border-box; filter: blur(10px); position: absolute; left: 0px; top: 960px; height: 240px; min-height: 240px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+</div>
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 60px; box-sizing: border-box; position: absolute; left: 0px; top: 960px; height: 240px; min-height: 240px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+<h1 id="die-spielgeräte"><strong>Die Spielgeräte</strong></h1>
+</div></section><section data-markdown="" data-markdown-parsed="true" class="drop past" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="7" data-index-v="1"><p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita4.jpg" alt="" style="position: absolute; left: 0px; top: 60px; height: 1080px; min-height: 1080px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita5.jpg" alt="" style="position: absolute; left: 979.1999999999999px; top: 540px; height: 600px; min-height: 600px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/fjkita6.jpg" alt="" style="position: absolute; left: 979.1999999999999px; top: 60px; height: 456px; min-height: 456px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 20px; box-sizing: border-box; position: absolute; left: 1478.3999999999999px; top: 60px; height: 456px; min-height: 456px; width: 460.79999999999995px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h2 id="das-newton"><strong>Das "Newton"</strong></h2>
+</div>
+
+<!-- -->
+</section><section data-markdown="" data-markdown-parsed="true" class="drop past" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="7" data-index-v="2"><p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/IMG_0250.JPG" alt="" style="position: absolute; left: 0px; top: 240px; height: 480px; min-height: 480px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Kita 31.jpg" alt="" style="position: absolute; left: 672px; top: 240px; height: 480px; min-height: 480px; width: 672px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Kita 32.JPG" alt="" style="position: absolute; left: 1440px; top: 240px; height: 480px; min-height: 480px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></p>
+
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 20px; box-sizing: border-box; position: absolute; left: 0px; top: 780px; height: 240px; min-height: 240px; width: 1920px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly">
+
+<h1 id="das-juggleboard"><strong>Das Juggleboard</strong></h1>
+</div>
+
+<!-- -->
+</section><section data-markdown="" data-markdown-parsed="true" class="" style="top: 0px; display: none;" aria-hidden="true" data-index-h="7" data-index-v="3"><p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/IMG_0198.JPG" alt=""></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/IMG_0214.JPG" alt=""></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/DSC01002.JPG" alt=""></p>
+
+</section></section><section data-markdown="" data-markdown-parsed="true" style="top: 0px; display: none;" class="future" hidden="" aria-hidden="true" data-index-h="8"><h1 id="5-step-method">5 Step Method</h1>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Anmerkung 2020-03-09 215437.png" alt=""></p>
+
+
+<p>Schwimmhilfen für das Jonglieren lernen</p>
+<ul>
+<li>  Konzepte zuerst (Juggleboard oder Body-Juggling)</li>
+<li>  Sequenzierung / Bewegungs - Kapazität erhöhen (Die Kuh springt über den Mond)</li>
+<li>  erst dann starten mit klassischen Übungen (1,2 und 3 Bälle)</li>
+</ul>
+</section><section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true" data-index-h="9"><section data-markdown="" data-markdown-parsed="true" style="top: 0px; display: none;" class="past" hidden="" aria-hidden="true" data-index-h="9" data-index-v="0"><h1 id="wie-funktioniert-bewegung">Wie funktioniert Bewegung?</h1>
+</section><section data-markdown="" data-markdown-parsed="true" class="past" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="9" data-index-v="1"><ul>
+<li>  Zunächst einmal sind der menschliche Körper und das Gehirn binär, das heißt, sie bestehen aus zwei Hälften: einer linken und einer rechten Seite.</li>
+<li>  Jede Seite ist symmetrisch und spiegelt die der anderen, wobei die linke Seite des Gehirns die rechte Seite des Körpers steuert und umgekehrt.</li>
+</ul>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Binary Form.png" alt=""></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="past" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="9" data-index-v="2"><ul>
+<li>  Sensorische Informationen, die von einer Seite des Körpers empfangen werden, werden immer zuerst in der entsprechenden (gegenüberliegenden) Seite des Gehirns verarbeitet.</li>
+<li>  Die Anwendung dieser Zweiteilung auf die Anatomie unseres Gehirns erfordert eine Diskussion über eine bestimmte Region, die als Corpus callosum bekannt ist.</li>
+<li>  Diese Struktur ist für die Kommunikation von Informationen zwischen den beiden Gehirnhälften verantwortlich.</li>
+</ul>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/corpus callosum.jpg" alt=""></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="" style="top: 0px; display: none;" aria-hidden="true" data-index-h="9" data-index-v="3"><p>Wann immer etwas von der einen Seite des Körpers erlebt wird, muss die sensorische Information über diese Erfahrung (zuerst) an die entsprechende Seite des Gehirns übermittelt werden.</p>
+<p>Je nach dem Ergebnis der Interaktion muss die Information über die Erfahrung nun in eine von zwei Richtungen kommuniziert werden: lateral oder bilateral.</p>
+<p>Lateral</p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Lateral.png" alt=""></p>
+
+<p>Bilateral</p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Bilateral.png" alt=""></p>
+
+</section></section><section style="top: 0px; display: none;" class="stack future" data-previous-indexv="0" hidden="" aria-hidden="true" data-index-h="10"><section data-markdown="" data-markdown-parsed="true" style="top: 0px; display: none;" class="" aria-hidden="true" data-index-h="10" data-index-v="0"><h1 id="theorie-der-process-formations">Theorie der “Process Formations”</h1>
+<p>Die Theorie der “Process Formations” ist eine tabellarische Auflistung, die die gesamten möglichen Kombinationen unserer (binären) Interaktionen mit Raum und Zeit kombiniert und aufzeigt.</p>
+<h1 id="raum">Raum</h1>
+<p>Lateral
+Bilateral</p>
+<h1 id="zeit">Zeit</h1>
+<p>Synchron
+Asynchron</p>
+<h1 id="signal">Signal</h1>
+<p>Assoziiert
+Dissoziiert</p>
+</section><section data-markdown="" data-markdown-parsed="true" class="future" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="10" data-index-v="1"><h1 id="zeit-synchron">Zeit (Synchron)</h1>
+<p>Wenn die Frequenz der Interaktion gespiegelt oder geteilt wird zwischen beiden Seiten unseres Gehirns.</p>
+<p>Dies geschieht immer dann, wenn Interaktionen von beiden Seiten beiden Seiten gleichzeitig initiiert werden, wie wie zum Beispiel das seitliche Werfen und Fangen von zwei Bällen zur zur gleichen Zeit.</p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Time-Synch.png" alt=""></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="10" data-index-v="2"><h1 id="zeit-asynchron">Zeit (Asynchron)</h1>
+<p>Eine asynchrone Beziehung zur Zeit bedeutet, dass die Interaktionen immer abwechselnd zwischen den beiden Gehirnhälften hin- und herwechseln muss. </p>
+<p>Ein Beispiel dafür wäre das gleiche seitliche Werfen und Fangen von zwei Bällen, aber zu unterschiedlichen Zeiten.</p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Time-Asynch.png" alt=""></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" style="top: 0px; display: none;" hidden="" aria-hidden="true" data-index-h="10" data-index-v="3"><h1 id="raum-lateral">Raum (lateral)</h1>
+<p>Eine laterale Beziehung zum Raum bedeutet, dass die Informationen nicht zwischen den beiden Großhirnhälften unseres Gehirns kreuzen müssen. Dies geschieht immer dann, wenn eine Interaktion auf einer Seite des Körpers stattfindet, die das Erleben der anderen Seite nicht beeinflusst.</p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Raum-Lateral.png" alt=""></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" style="top: 179px; display: none;" hidden="" aria-hidden="true" data-index-h="10" data-index-v="4"><h1 id="raum-bilateral">Raum (bilateral)</h1>
+<p>Bilaterale Ordnungsbeziehungen mit dem Raum erfordern, dass ihre Informationen zwischen den beiden Seiten unseres Gehirns kommuniziert werden, und es gibt mehrere Möglichkeiten, diese Arten von Interaktionen auszulösen oder zu unterteilen.</p>
+<p>Dazu gehören Ordnungsfaktoren, die sich auf den Austausch von <strong>Objekten, Orten und Geometrien</strong> beziehen.</p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Raum-Bilateral.png" alt=""></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" style="top: 211px; display: none;" hidden="" aria-hidden="true" data-index-h="10" data-index-v="5"><h1 id="signal-assoziiert">Signal (assoziiert)</h1>
+<p>Assoziierte Beziehungen mit Signalen treten immer dann auf, wenn beide Seiten des Körpers identische Beziehungen zum Raum ausdrücken. Ein Beispiel hierfür wäre das Werfen von Bällen zwischen zwei Händen, wobei eine identische Technik verwendet wird, um den Ausdruck beider Seiten zu steuern.</p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Signal - Assoziiert.png" alt=""></p>
+
+</section><section data-markdown="" data-markdown-parsed="true" class="future" style="top: 187px; display: none;" hidden="" aria-hidden="true" data-index-h="10" data-index-v="6"><h1 id="signal-dissoziiert">Signal (dissoziiert)</h1>
+<p>Disassoziierte Beziehungen mit Signalen treten immer dann auf, wenn eine Seite des Körpers eine andere Interaktion mit dem Raum erfährt als die andere.</p>
+<p style="line-height: 0" class="reset-paragraph"><img src="./inklusive_bewegungsspiele_files/Raum-Dissoziiert.png" alt=""></p>
+
+
+<p>--</p>
+</section></section></div>
+    <div class="slide-number" style="display: block;"><a href="http://localhost:3000/#/4">
+					<span class="slide-number-a">5</span>
+					</a></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left enabled" aria-label="previous slide"><div class="controls-arrow"></div></button>
+			<button class="navigate-right enabled fragmented" aria-label="next slide"><div class="controls-arrow"></div></button>
 			<button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button>
-			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Inklusive Bewegungsspiele Marc Bielert EigenArts Halle </div></div>
+			<button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="progress" style="display: block;"><span style="transform: scaleX(0.181818);"></span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"><button class="resume-button">Resume presentation</button></div><div class="aria-status" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">Warum Inklusive Bewegungsspiele? Inklusiv: Jeder Mensch, egal welchen Alters oder mit welchen Einschränkungen Alltagsrelevante Bewegungsförderung Spiele ermöglichen eine hohe Zahl an Bewegungs - Wiederholungen ohne das die Motivation diese auszuführen sinkt Anpassbar an individuelle Ziele der Bewegungsförderung </div><div class="backgrounds"><div class="slide-background drop past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background drop past" data-loaded="true" style="display: none;"><div class="slide-background-content"></div></div><div class="slide-background drop past" data-loaded="true" style="display: block;"><div class="slide-background-content"></div></div><div class="slide-background drop past" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background drop present" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background drop future" style="display: block;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background drop past" data-background-hash="0/Bilder/46514050_584083148712701_263200109909508096_n.jpgnullnullnullnullnullnullnull" style="display: none;" data-loaded="true"><div class="slide-background-content" style="background-image: url(&quot;/Bilder/46514050_584083148712701_263200109909508096_n.jpg&quot;);"></div></div><div class="slide-background drop past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background drop past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background past" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div><div class="slide-background stack future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div><div class="slide-background present" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div><div class="slide-background future" style="display: none;" data-loaded="true"><div class="slide-background-content"></div></div></div></div></div>
 
     <script src="./inklusive_bewegungsspiele_files/reveal.js.Download"></script>
 
@@ -254,7 +412,7 @@ img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!importan
       // options from URL query string
       var queryOptions = Reveal().getQueryHash() || {};
 
-      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"slideNumber":true,"transition":"slide","transitionSpeed":"slow"}, queryOptions);
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"slideNumber":true,"navigationMode":"default","transition":"slide","transitionSpeed":"slow"}, queryOptions);
     </script>
 
     <script>
@@ -262,4 +420,4 @@ img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!importan
     </script>
   
 
-<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size1, monospace;"></div></div></body></html>
+<div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; min-width: 0px; max-width: none; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Size1, sans-serif;"></div></div></body></html>
