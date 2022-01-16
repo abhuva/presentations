@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			const size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/fjkita1.jpg" alt="" style="position: absolute; left: 0px; top: 24px; height: 1200px; min-height: 1200px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/fjkita2.jpg" alt="" style="position: absolute; left: 403.2px; top: 24px; height: 1200px; min-height: 1200px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/fjkita3.jpg" alt="" style="position: absolute; left: 806.4px; top: 24px; height: 480px; min-height: 480px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<div class="has-light-background reset-margin" style="background-color: white; padding: 30px; box-sizing: border-box; position: absolute; left: 806.4px; top: 576px; height: 180px; min-height: 180px; width: 1094.3999999999999px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+# Inklusive Bewegungsspiele<!-- .element: style="font-size: 120px" --> 
+</div>
+<div class="has-light-background reset-margin flex-even" style="background-color: #FFFFFF00; position: absolute; left: 652.8px; top: 984px; height: 180px; min-height: 180px; width: 1286.3999999999999px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly" >
+
+# Marc Bielert<!-- .element: style="font-size: 40px" --> 
+# EigenArts Halle<!-- .element: style="font-size: 40px" -->
+</div>
+
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template">
+<div class="has-light-background reset-margin" style="background-color: white; padding: 60px; box-sizing: border-box; position: absolute; left: 0px; top: 0px; height: 1200px; min-height: 1200px; width: 1920px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+# Inhalt
+
+-   Einführung
+-   Warum Inklusive Bewegungsspiele
+-   Methode: Functional Juggling - Überblick
+-   5 Step Methode
+-   Einführung: wie funktioniert Bewegung
+-   Theorie der “Process Formations”
+-   Karte der räumlichen Anordnung “spatial sequencing maps”
+-   Juggleboard
+-   Prop Swap Notation
+-   Zone der proximalen Entwicklung
+-   (Solo) Soziale Aktivitäten
+</div>
+
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template">
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/neustadt01.jpg" alt="" style="position: absolute; left: 0px; top: 0px; height: 480px; min-height: 480px; width: 748.8px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/neustadt02.jpg" alt="" style="position: absolute; left: 768px; top: 0px; height: 1140px; min-height: 1140px; width: 1344px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 60px; box-sizing: border-box; position: absolute; left: 0px; top: 480px; height: 240px; min-height: 240px; width: 729.6px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+# Einführung
+</div>
+
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template">
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/Bewegungslabor.png" alt="" style="position: absolute; left: 96px; top: 60px; height: 1020px; min-height: 1020px; width: 1728px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template">
+<div class="has-light-background reset-margin" style="background-color: white; padding: 60px; box-sizing: border-box; position: absolute; left: 0px; top: 0px; height: 1200px; min-height: 1200px; width: 1920px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+## Warum Inklusive Bewegungsspiele?
+
+-   Inklusiv: Jeder Mensch, egal welchen Alters oder mit welchen Einschränkungen<!-- .element: class="fragment" -->
+-   Alltagsrelevante Bewegungsförderung<!-- .element: class="fragment" -->
+-   Spiele ermöglichen eine hohe Zahl an Bewegungs - Wiederholungen ohne das die Motivation diese auszuführen sinkt<!-- .element: class="fragment" -->
+-   Anpassbar an individuelle Ziele der Bewegungsförderung<!-- .element: class="fragment" -->
+</div>
+
+
+<!-- .slide: class="drop" -->
+</script></section><section  data-markdown><script type="text/template">
+# **Methode des  Functional Juggling**
+# **Entstehung und Überblick**
+</script></section><section  data-markdown><script type="text/template">
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/craig.jpg" alt="" style="position: absolute; left: 0px; top: 60px; height: 960px; min-height: 960px; width: 1344px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<div class="has-dark-background reset-margin" style="background-color: #FF0000; padding: 20px; box-sizing: border-box; position: absolute; left: 960px; top: 480px; height: 600px; min-height: 600px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+-   Craig Quat
+-   entwickelte die Methodik ca. 2010
+-   zusammenarbeit mit Kliniken, Neurowissenschaftler*innen, Therapiezentren 
+-   Gründung des “Collective”-Netzwerk in mittlerweile über 20 Ländern
+</div>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/images.png" alt="" style="position: absolute; left: 1152px; top: 60px; height: 240px; min-height: 240px; width: 768px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+
+<!-- .slide: class="drop" -->
+</script></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: class="drop" data-background-image="/Bilder/46514050_584083148712701_263200109909508096_n.jpg" -->
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF55; padding: 60px; box-sizing: border-box; filter: blur(10px); position: absolute; left: 0px; top: 960px; height: 240px; min-height: 240px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+</div>
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 60px; box-sizing: border-box; position: absolute; left: 0px; top: 960px; height: 240px; min-height: 240px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+# **Die Spielgeräte**
+</div></script></section><section data-markdown><script type="text/template">
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/fjkita4.jpg" alt="" style="position: absolute; left: 0px; top: 60px; height: 1080px; min-height: 1080px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/fjkita5.jpg" alt="" style="position: absolute; left: 979.1999999999999px; top: 540px; height: 600px; min-height: 600px; width: 960px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<p style="line-height: 0" class="reset-paragraph"><img src="Bilder/fjkita6.jpg" alt="" style="position: absolute; left: 979.1999999999999px; top: 60px; height: 456px; min-height: 456px; width: 480px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 20px; box-sizing: border-box; position: absolute; left: 1478.3999999999999px; top: 60px; height: 456px; min-height: 456px; width: 460.79999999999995px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+## **Das "Newton"**
+</div>
+
+<!-- .slide: class="drop" -->
+</script></section><section data-markdown><script type="text/template">
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh3.googleusercontent.com/9xx4PMrA2fNLojvnMwvvbwI-e2fjrHGHZOu_7vX2_ACJg1INTGRI3Jn4N83zbLbgtHMCsnJhwVhC0PYtZR8XK5lYEw8o3ij3ZxLbTZCQK_2YI4faQ8h4rDLqrVEDZ26EojCCnX9Lfxg" alt="" style="position: absolute; left: 0px; top: 240px; height: 480px; min-height: 480px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/bMshvs7ilTF3etRscxLECNoxHJ4GYPXAGYGLSHLWti1UXIac3ZVGYpAhH_LLRPTzhkZT6Aqfh4FAyWo45OcxPlpBoHfuZ8CUxjuWKw6zysMeUgbLm1eneBUcAJzKraHXR9BK5_1ITzI" alt="" style="position: absolute; left: 672px; top: 240px; height: 480px; min-height: 480px; width: 672px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh3.googleusercontent.com/oEXZjcVC_Br6eedeq1ewH9ybfCY_1z5DgyMzoD1cIp2fRMTMKon8N32337SNKNSEd7vI-RZ6w_rpiiaZSr6GUtLU0i93l7gHn9Jd8sVopceaIMg9QOLwmWazUcTICe2dvv1Q5xhjUe0" alt="" style="position: absolute; left: 1440px; top: 240px; height: 480px; min-height: 480px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 20px; box-sizing: border-box; position: absolute; left: 0px; top: 780px; height: 240px; min-height: 240px; width: 1920px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" >
+
+# **Das Juggleboard**
+</div>
+
+<!-- .slide: class="drop" -->
+</script></section><section data-markdown><script type="text/template">
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh6.googleusercontent.com/CZCjAcgtgTZLmBPOteLJMTz-Zzy2CJOqfKc7N5DYMAP_bTGX9cHqm-JnuAeVDyA6i0IHWI-zGq6f3S0FDh7mmsQ904aYhJqo0yrd3B6VLwKw6YWtIXSaPdmF2a6cAi2MunEC5LnxMaU" alt="" ></img></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh3.googleusercontent.com/J4Yr0ourahrx2GfyPc1JAie7sBjUOTbDl6RnjF4i2oNW0lcQpM-VhRg8wLIViCWlGIXINhpRqubGid0ZL4CoHzxQ9_yoCcWf-JCExgHAEPPyAiJ6hGjXYHXBvYPu4pbMtbMkQzaHEgw" alt="" ></img></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/zPMyb_Wl0MrEJvlXJ7jrFc0vs-CqmYrChxXT5kmvDwEKjr0CI4ybn56fb6g8e1xPu1-j15k0KUPN_zP-69O1ZHHVY27_ynLs7r9dnnVKFSdEywOgx6RIFGkazHayXsKh86LQ8cv7oHg" alt="" ></img></p>
+
+</script></section></section><section  data-markdown><script type="text/template">
+# 5 Step Method
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh6.googleusercontent.com/DwbRJdnFj7Ob50k2uutAMpbEf653EjuBCJgS-0jLnAvZ1HNdVUQGBtcLse_jebq158UC61Z6FkLyWVd2ws_DfnLry8k8XaPm-QmMRUTvOiPCMs0-_ZmTlR_kMZxdsDwtwp2Zf2vJoc0" alt="" ></img></p>
+
+
+Schwimmhilfen für das Jonglieren lernen
+-   Konzepte zuerst (Juggleboard oder Body-Juggling)
+-   Sequenzierung / Bewegungs - Kapazität erhöhen (Die Kuh springt über den Mond)
+-   erst dann starten mit klassischen Übungen (1,2 und 3 Bälle)
+</script></section><section ><section data-markdown><script type="text/template">
+# Wie funktioniert Bewegung?
+</script></section><section data-markdown><script type="text/template">
+-   Zunächst einmal sind der menschliche Körper und das Gehirn binär, das heißt, sie bestehen aus zwei Hälften: einer linken und einer rechten Seite.
+-   Jede Seite ist symmetrisch und spiegelt die der anderen, wobei die linke Seite des Gehirns die rechte Seite des Körpers steuert und umgekehrt.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh3.googleusercontent.com/rGm-IAB4CBEsjUXveCeRTXdzLso3FthK7yIF0ODymIMWSihgi-gEns_QzZzRjsamOTM55HPI0f5yTeglmXV4XqYcDGoEyx4P3Copk_C5X6HFyh7P6xNQEzLZ5msU4gtDexUMP8HqAks" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+-   Sensorische Informationen, die von einer Seite des Körpers empfangen werden, werden immer zuerst in der entsprechenden (gegenüberliegenden) Seite des Gehirns verarbeitet.
+-   Die Anwendung dieser Zweiteilung auf die Anatomie unseres Gehirns erfordert eine Diskussion über eine bestimmte Region, die als Corpus callosum bekannt ist.
+-   Diese Struktur ist für die Kommunikation von Informationen zwischen den beiden Gehirnhälften verantwortlich.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh4.googleusercontent.com/W8vFmLctTrVpwMiKKCP24DSAH5_VZzkd_Q-Z8F_WmoqTw4a2OjUV66CP-DCHCMDD23OEaDjKYoIWcypm8mTjb0i48SH8IpbAG9UDaYn8ymFKnKGD9HmL2PSMBAC4myhQEpL4f0H1hLs" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+Wann immer etwas von der einen Seite des Körpers erlebt wird, muss die sensorische Information über diese Erfahrung (zuerst) an die entsprechende Seite des Gehirns übermittelt werden.
+
+Je nach dem Ergebnis der Interaktion muss die Information über die Erfahrung nun in eine von zwei Richtungen kommuniziert werden: lateral oder bilateral.
+
+Lateral
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh3.googleusercontent.com/0mRiDxtu7lJJANFBc2o4wXxNJmOCHk_x1vNLlsxx4PE4-AZOYL8FMXrec4SadrU-L5mrDNG9BSIqqUmqD4rxpf1jqrQSlsGBQV9GeKVfNh2DF38BBlGSB_N7Tr8ZW0ibVaF8SPk_P3Q" alt="" ></img></p>
+
+Bilateral
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh4.googleusercontent.com/mHmNqWoGKlYK47fGwqjUgydzJrse_66jH6SXZpp4nveO-5sqirxH4ckjeam07FFkbHV4XLcWcN5Sx6Z2wDTRL9YMi8TGyBRZDeNXAE9-5WiJ0EKX_OZkXg0QFwZi1O3ebO3POj36Jx0" alt="" ></img></p>
+
+</script></section></section><section ><section data-markdown><script type="text/template"># Theorie der “Process Formations”
+Die Theorie der “Process Formations” ist eine tabellarische Auflistung, die die gesamten möglichen Kombinationen unserer (binären) Interaktionen mit Raum und Zeit kombiniert und aufzeigt.
+
+# Raum
+Lateral
+Bilateral
+
+# Zeit
+Synchron
+Asynchron
+
+# Signal
+Assoziiert
+Dissoziiert
+</script></section><section data-markdown><script type="text/template"># Zeit (Synchron)
+Wenn die Frequenz der Interaktion gespiegelt oder geteilt wird zwischen beiden Seiten unseres Gehirns.
+
+Dies geschieht immer dann, wenn Interaktionen von beiden Seiten beiden Seiten gleichzeitig initiiert werden, wie wie zum Beispiel das seitliche Werfen und Fangen von zwei Bällen zur zur gleichen Zeit.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/8Y41yb5Dnb8IzR_00lmLxblTsWuavT8W3Yqu72kdnuNd1Q2bN2qoabgYdRBk0vu9duybYOq4M4K2Ix6yKBTznCJsm1UbGxh7BDF9NMX0x0GW2oR46uc4fS1fwDVdg1mE3kbY5LQG4Vo" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+# Zeit (Asynchron)
+
+Eine asynchrone Beziehung zur Zeit bedeutet, dass die Interaktionen immer abwechselnd zwischen den beiden Gehirnhälften hin- und herwechseln muss. 
+
+Ein Beispiel dafür wäre das gleiche seitliche Werfen und Fangen von zwei Bällen, aber zu unterschiedlichen Zeiten.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/Q2xWCvrzYXkwXK0vpgNjgcamWkC5KPPm8fUPrMoY626XNA-BpIX6cOVIjeADh4HtKPI_PhSftXlXBewi79o5biR6HAJhAvD3BNpv5CEJagPgkt-PzVpBTlFtPazsFfJtUWapOigBaik" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template"># Raum (lateral)
+
+Eine laterale Beziehung zum Raum bedeutet, dass die Informationen nicht zwischen den beiden Großhirnhälften unseres Gehirns kreuzen müssen. Dies geschieht immer dann, wenn eine Interaktion auf einer Seite des Körpers stattfindet, die das Erleben der anderen Seite nicht beeinflusst.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/jbjhTOiF4Ty8PIyh3JxN9jCnFTtiagHVsqgusqbhT305lBzQLMPpzkLkHs5eFUT8awNPg5olY7Bmda343r3xPHaIWr24veg-yFGZdfEU817pCOxfvce871QkTOCPX3_M9Ys1y01IT4s" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template"># Raum (bilateral)
+
+Bilaterale Ordnungsbeziehungen mit dem Raum erfordern, dass ihre Informationen zwischen den beiden Seiten unseres Gehirns kommuniziert werden, und es gibt mehrere Möglichkeiten, diese Arten von Interaktionen auszulösen oder zu unterteilen.
+
+Dazu gehören Ordnungsfaktoren, die sich auf den Austausch von **Objekten, Orten und Geometrien** beziehen.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh6.googleusercontent.com/ZJRC__TpKBjnYy0F_wQozrkzKHxDwMfGkN_QRvd0vVpqL34J8jL8NaZZPIE8r8rXoX17kR_0WsctQi3cJ9LjVhBvW1gkfYK5Ghii21HXVsDi2cLlnN1Yd3eU4wxxtHRUI1Cg7zCO1-A" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+# Signal (assoziiert)
+Assoziierte Beziehungen mit Signalen treten immer dann auf, wenn beide Seiten des Körpers identische Beziehungen zum Raum ausdrücken. Ein Beispiel hierfür wäre das Werfen von Bällen zwischen zwei Händen, wobei eine identische Technik verwendet wird, um den Ausdruck beider Seiten zu steuern.
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/1Ydm_IZDGWf6LpFvg0RW7SvIGFyGYpobiB9XmK3WU-52flgCzEeV-dV6eUf3wZIO0tGK3v5Gze5Zylx7pplr9-8IczJLe_UvAK1K358eOwhsbkhOcs2MgTZs8GwTuJjfZ02recCDYD8" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+# Signal (dissoziiert)
+
+Disassoziierte Beziehungen mit Signalen treten immer dann auf, wenn eine Seite des Körpers eine andere Interaktion mit dem Raum erfährt als die andere.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh6.googleusercontent.com/YKPS6xTFxdbU5wrU-c9qjkUZwT76uw_1owNIRELvuczQk3CWrOUWlq-QdG0LBYHfojs24Wijj1pkToNVyXmv1YuWHtXbCo7JUkud2VjB3RyKRO6OZeNLBz78eswCVC3vBU3H40C1HSw" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<div class="has-light-background reset-margin" style="background-color: #AAAAAA60; padding: 0px; box-sizing: border-box; position: absolute; left: 384px; top: 240px; height: 240px; min-height: 240px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+Synchron<br>Lateral
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: #AAAAAA60; padding: 0px; box-sizing: border-box; position: absolute; left: 384px; top: 600px; height: 240px; min-height: 240px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+Synchron<br>BiLateral
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: #AAAAAA60; padding: 0px; box-sizing: border-box; position: absolute; left: 998.4px; top: 240px; height: 240px; min-height: 240px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+Asynchron<br>Lateral
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: #AAAAAA60; padding: 0px; box-sizing: border-box; position: absolute; left: 998.4px; top: 600px; height: 240px; min-height: 240px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+Asynchron<br>BiLateral
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 384px; top: 96px; height: 120px; min-height: 120px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+## Synchron
+</div>
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 998.4px; top: 96px; height: 120px; min-height: 120px; width: 576px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" align="justify">
+
+## ASynchron
+</div>
+
+<!-- .slide: class="drop" -->
+</script></section><section data-markdown><script type="text/template">
+Time | Space | Signal
+---|---|---
+Synchron | Lateral | Assoziiert
+Asynchron | Lateral | Assoziiert
+Synchron | Bilateral | Assoziiert
+Asynchron | Bilateral | Assoziiert
+Synchron | Lateral | Dissoziiert
+Asynchron | Lateral | Dissoziiert
+Synchron | Bilateral | Dissoziiert
+Asynchron | Bilateral | Dissoziiert
+</script></section></section><section  data-markdown><script type="text/template">
+# Übung
+
+Führen Sie die folgenden Sequenzen, die der Kursleiter zufällig aufruft, nur mit Klopfbewegungen aus.
+</script></section><section  data-markdown><script type="text/template">
+# Statische vs Dynamische Interaktionen
+</script></section><section  data-markdown><script type="text/template">
+# Statische Interaktionen
+
+Viele Interaktion erfordern keine eigenständige Bewegung der Objekte. Wir bezeichnen diese Arten von Interaktionen als statisch. Wir können diese Erfahrungen als eine Möglichkeit nutzen, um die Funktionalität in vielen bestehenden Aktivitäten zu variieren und angemessen zu gestalten.
+
+Statische Interaktionen können als solche betrachtet werden, die keine eigenständige Bewegung der Objekte durch den Raum beinhalten und daher keine sensorische Rückmeldung über ihre Umgebung haben.
+</script></section><section  data-markdown><script type="text/template">
+# Dynamische Interaktionen
+
+Dynamische Interaktionen sind alle Interaktionen, die die sensorische Verarbeitung von externen Bewegungen durch den Raum beinhalten.
+
+Diese Formen der Interaktion enthalten sensorische Feedback-Informationen über ihre Umgebung, die benötigt werden, um unsere Beziehung zu ihr harmonisieren zu können.
+
+</script></section><section ><section data-markdown><script type="text/template">
+# Funktionale Integration
+
+Indem wir die Beziehungen der Theorie der "Process Formations" nutzen und dann gemischte Formen von statischen/dynamischen Interaktionen einbeziehen, sind wir in der Lage, die verbrachte Zeit mit der Aufgabe und die Wiederholungsanzahl jeder Aktivität zu erhöhen.
+
+Indem wir die Aktivitäten durch etwas wie z.B. das Ausgießen von Bechern mit Wasser oder das Malen mit Buntstiften ersetzen, verwandeln wir die positiven Ergebnisse des Jonglierens in ein völlig neues Feld der therapeutischen Praxis.
+
+Außerdem eignet sich diese Struktur des Spiels leicht für nonverbale Kommunikationsstrategien, was eine entscheidende Rolle bei der Sicherstellung der Zugänglichkeit für jeden Menschen spielt.
+</script></section><section data-markdown><script type="text/template">
+<iframe width="800" height="500" src="https://www.youtube.com/embed/zFPsr1L13Vs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</script></section></section><section  data-markdown><script type="text/template">
+# Übung
+
+Beginnend mit der Absicht, die Erfahrung des Jonglieren zu nutzen, um die verbrachte Zeit für eine Bewegungs-Aufgabe und die Zahl der Wiederholungen zu verbessern, experimentieren und erforschen Sie neue Aktivitäten mit alltäglichen Objekten.  Orientieren Sie sich dabei an der Theorie der “Process Formations”
+(Nur statische Interaktionen / Bonus für narratives Spiel)
+</script></section><section ><section data-markdown><script type="text/template">
+# Karte der räumlichen Anordnung
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh6.googleusercontent.com/BFu4IkcwhvDIAbY__W--aWgl0tFKcAg0DriUgzx34-9ovq2NiejgAPZzlJw0aDEExq9SHds_wSAwmsShXU16cLqLWmC9BnZSCaBwfgMZ_TxqIU0STrOC69yGHvdWmdkLhadnLo3hToo" alt="" ></img></p>
+
+
+Die Karten der räumlichen Anordnung sollen angeben, wo und wann unsere Interaktionen mit dem Raum stattfinden, legen aber nichts über die Art und Weise fest, in der sie durchgeführt werden müssen.
+</script></section><section data-markdown><script type="text/template">
+# Angewandtes Modell
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh6.googleusercontent.com/9GjVvcL8JDl6HTPBn8P_RFDQCOUt-K_nkfrXkfoHTonV64PVxWtWXbrU7Sv4l2TxBa_RsIc-r31KKYv19bhMJUn1BgalS4LoIBGU7xVHlNA1HpkmAhUvXFhmhipFtLD0AqJJUZNI6cQ" alt="" ></img></p>
+
+
+Räumliche Sequenzierungskarten können aus einer beliebigen Anzahl von Punkten bestehen; die kleinste Menge, die benötigt wird, um unser gesamtes Spektrum an binären Beziehungen anregen zu können, ist jedoch Fünf.
+</script></section><section data-markdown><script type="text/template">
+Meistens werden diese Punkte zur Vereinfachung in einer horizontalen Ebene angeordnet, um ihre Interaktion leichter zugänglich zu machen. Es ist jedoch auch denkbar, sie in beliebiger Reihenfolge nach Höhe (y), Tiefe (z) oder Breite (x) anzuordnen.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/RgTQk1RVR0oZQZC5duU92_aSRpcwA2-k8qhVnVOmMZUVEotoT2Alf8n7Hsdo-_7Jb4cPUu60p1DAuCNy9d2FGRLb6XyaXYzLbTNYnUs8lqooZtnOpy3CBcojFyaGgqZkeQaS2EpSKwE" alt="" ></img></p>
+
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/iGgDQ-Pgi3P2A3K-RnLZsbKZZXgIUVrjTm8Rd-BPtVJmRCvB17s1rcFZTYOUJ1Wws8mzDIPnMtumiocq73Qy4wU-UA7WcJAfB0moprmNETNQg6oqiT1oO1Eh0gOU8a-WaLZ1E_D8vfA" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+x-Achse
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh6.googleusercontent.com/-5R2YPUr3kazxF7_JwFfBSYrIcfs29k5uj0UltTnXnyD5bz5yaEvM5k8Zrw4g6InGTqWr2xW2vQKfcf_Aaf0f3HN3BrwmXmu-m6mqBBF4rpUzPoJ59hJnBmBKeHa78FZkivXbPf61IM" alt="" ></img></p>
+
+
+y-Achse
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh5.googleusercontent.com/hzr7clEJSISPf5DText2SCWavtpvFIPGxUe7Kt0Q0---LVZSf_J4E4zTdWlnNk7Hgfb8rFcJaC7sMqTTVma1qkAO1gdS7UGv_rr2ELjVbFKL32knSfPDztHutYsHDZrK3K5Z-OBTcrA" alt="" ></img></p>
+
+
+Z-Achse
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh4.googleusercontent.com/n7cpYXw7DA8xFZZNhub04BAGnU6J9qdUYM4OR5NDodcfjW19MU6bpD6_2cdcVP9wPU1Btx3Hm8CiRzdf9tLqs2MF-yMebZz6rqc6bfmtu22so3H3I6Qd3hvZcu-mboEXsYgsKgaH3BQ" alt="" ></img></p>
+
+
+Mehrere Achsen
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh3.googleusercontent.com/HP1Pij4qA7BbigTpBCW22ruE0ZDIHmBS2OfjnbEY6D8VP2jqUNWLxD67DNO3my4_OkQit_hCc3pMgLJ8KaRG0qegPQtpHRaVnEUrMDFz2UbqkIca78P-HmF3K51QIf1gzB4KX7VnWCc" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+# Übung
+  
+Experimentieren Sie mit 5 entlang der x-Achse angeordneten Berührungspunkten und erkunden Sie die verschiedenen Sequenzierungsmöglichkeiten dieser Anordnung. Verwenden Sie nur statische Bewegungen für Ihre Interaktionen, und suchen Sie nach so vielen synchronen lateralen Sequenzierungskombinationen, wie Sie finden können.
+
+Nachdem Sie mit einigen dieser Sequenzen gespielt haben, versuchen Sie, die Theorie der “Process Formations” auf diese Muster anzuwenden: 
+
+| 1   | 2  |  3  | 4
+| --- | --- | --- |---
+Synchron | Asynchron | Synchron| Asynchron  
+Lateral | Lateral| Bilateral | Bilateral</script></section></section><section  data-markdown><script type="text/template">
+# Das Juggleboard
+
+Das Juggleboard ist eine Möglichkeit, die Konzepte einer fünf Punkte umfassenden räumlichen Anordnung darzustellen; es ist jedoch nicht die einzige Möglichkeit, die wir haben, um solche Umgebungen zu realisieren. Obwohl wir hauptsächlich mit diesem Gerät arbeiten werden, ist es gut zu wissen, dass diese Konzepte selbst nicht exklusiv für ein Gerät sind, sondern vielmehr übertragbar sein sollen.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh3.googleusercontent.com/SGKGJQuBCEtlB88UPyUsq7xyWUYctGf56oOc_mfPnrocG5Hh9NXdvcvOR-nnihhFbvDdhd-tRQavnGlBW7j8jfrYmoGSLCUtRmYMt4YJEJHZxpUlM54rbhKdKNyDjixZVcwwHQWMl0w" alt="" ></img></p>
+
+</script></section><section  data-markdown><script type="text/template">
+# Prop Swap Notation
+
+Propswap ist ein geordnetes Notationssystem, das es uns erlaubt, die verschiedenen Sequenzierungsaktivitäten zu beschreiben
+
+Die Notation funktioniert durch die Zuweisung von ganzen Zahlen zu jedem der fünf räumlichen Punkte unserer Anordnung.
+
+Jede Zahl steht für eine neue Interaktion, und nimmt an, dass immer abwechselnd mit der rechten und der linken Körperseite interagiert wird.
+
+<p style="line-height: 0" class="reset-paragraph"><img src="https://lh6.googleusercontent.com/6LO8jxRDEJ2W7GkHvogs3IAN9le_87bpJ_3YPgkMMrwsYSFFRBA8T2iyirsxzIrUFjjoK91FsIpNKPBPKfDMKAHnkuF7px0qb2_P1EfNsot_7cOTxrBKZzQ0FohKIHYZfUxINUH75sU" alt="" ></img></p>
+
+</script></section><section ><section data-markdown><script type="text/template">
+# Juggleboard - Theorie und Notation
+
+**![](https://lh4.googleusercontent.com/usyuAAQ_MEllMKx207e8v1Q3E8euJcoToTwK0BiXGaYqgM-JlytXHVS6U8rQ8R6kzFjIGOUNdXfYkz607TRjbl82RDfovqUkjTKkHet88Q237HUODoT548kcFP5sKr49ce-EZocKpOw)**
+
+**![](https://lh3.googleusercontent.com/l1GWfXXAVWEfa-3fEFPiHyD8cuFtfcuoCZ_N6xgMyf_--Wrp-yuKrP9UeJhTtlVowzSRW8szeY2TRsrHWPeFwhQpEErrRSe7J-Uhrd2lkAq__IAgaIB2yxqpCdbxWD4j6XN98xdt8_k)**
+
+**![](https://lh5.googleusercontent.com/iuWEUuIi1hUg7PljhLVUFuLrSl8VV8Gk7E8-pjVyplcAyoV4IMVX5e4vZDe6D9TKes9uLAV2SgZAdFtKWlcSyGEfzD84XYNVmlaaczEECnpSynK7QircNaGX_cP_oylgu2zbSvUPvsk)**
+</script></section><section data-markdown><script type="text/template">
+**![](https://lh5.googleusercontent.com/a2eSQUvC4dd_5yWqrcbsRYuLuvbJEExfZwOm73tkk8canvHr1DpSULoZ95ioe7tQSObwe203SeKphTBXwSS0jUG4E_Nz72eaZp8HK4utr0c2UeEnH7Ok3S8OGkJaRMK9tIPb47wEUE0)**
+</script></section><section data-markdown><script type="text/template">
+**![](https://lh4.googleusercontent.com/5dZR4n8u1Vvfv9_LSliQR95sRFOQs86g21TRZU-Y0OColwWLMiXMo7ze6vVBPMkuJLdLwB9WGt_2dQ095ff65JSvl9JQ5cL3tJ39EuqkblgBff_-xweJMmby6460jQNs4UoRSrvG7rs)**
+</script></section><section data-markdown><script type="text/template">
+**![](https://lh4.googleusercontent.com/JjpOTQwmZHwQU70Gd6UgDdDZC3y5oe4EtW131ItDXZqYGrrKjZ0yDnyqUOQfkrusxSB_UprUcSCEhaTqrZ5djVHoDL9wyhPJzykry-mjB9ZClPWbOAM5-kKN5JA9o032ZqAyKkIuqaU)**
+</script></section><section data-markdown><script type="text/template">
+**![](https://lh4.googleusercontent.com/ewSPdT8TD8f-BRIbNJaysShxCB91dzlpkMB8k5u1egKM9s4dEeAeofm3oXspdGyetm76yrTrRRxiaE7D9WO9Cub2N45vHtEaT1LiKx5IKTcVh3YAdzC8pbPWS6b6U1MHi22Nd5K_Dyc)**
+</script></section></section><section  data-markdown><script type="text/template">
+# Übung
+
+Nehmen Sie fünf alltägliche Objekte, ordnen sie diese auf 5-Punkten an und erschaffen Sie eine Sequenz von Bewegungen auf Basis der Prop-Swap Notation.
+
+Interaktionen können entweder durch statische, dynamische oder kombinierte Variationen von beidem gebildet werden.
+
+Choreographieren Sie eine personalisierte Sequenz verschiedener Muster und notieren Sie anschließend Ihre Komposition mit Propswap.
+</script></section><section  data-markdown><script type="text/template">
+# Zone der proximalen Entwicklung
+
+**![](https://lh6.googleusercontent.com/9Ri1mqq47FG8GI9CL0qCtc7F4pU8kRx1WK1yDiTI6pJf_VpyNPrgm-xHtIo00WRmmtmt48seRMv_BEPWPmTCbljpWMM1n41X0M5hzqoiwZdVwKPprsYe5UQ8EekWvb4_5bYErsm9e_4)**
+</script></section><section ><section data-markdown><script type="text/template">
+# Soziale Aktivität
+
+Zu Beginn wird das Juggleboard waagerecht aufgestellt, so dass die Teilnehmer einen Ball hin und her rollen.
+
+Nun imitieren wir diese Bewegung auf unserer Seite des Boards. Dabei ermutigen wir sie bewusst und unbewusst, uns nachahmen zu wollen, und hier beginnt unser neuer Kommunikationsstil mit ihnen.
+
+**![](https://lh3.googleusercontent.com/CMPc9zqyBO7q67VT5t6nUMEKytr6shNfwLe28yN8vNesxzxXZMFzBawlq-CvQPNsiyH8b8NfUuwplc3pSEeQR1x66pbrEnXPhSJL2RSl9hno6eZZtBoXkLUXComobmGDi1ukf6i5MTo)**
+</script></section><section data-markdown><script type="text/template">
+Anfänglich ist es üblich, dass die Teilnehmer eher auf ihre Hände als auf uns schauen. Bevor wir also in der Lage sind, ihr Verhalten sozial zu beeinflussen, müssen wir zuerst ein gewisses Maß an Blickkontakt mit ihnen herstellen.
+
+Wir lösen diese Reaktion aus, indem wir eine Eröffnungssequenz von Verhaltensweisen anwenden, die absichtlich so gestaltet sind, dass sie zu mehr sozialer Interaktion anregen, die Spielprinzipien etablieren und einen konsistenten Blickkontakt mit jedem unserer Teilnehmer entwickeln.
+
+**![](https://lh4.googleusercontent.com/muv62eqiooS9fof29wLpJ9PMhA8EwaZPFezl7cHydLMRCl7cqeg3cZxeLk5fJ5rdsipWEVnpoA77FLWsU09n1sDp4LPxDeJPE0J7ZQB1xuZaveKhRxvFOU3JpjogPyGqXEiVoKAbUnQ)**
+
+**![](https://lh6.googleusercontent.com/7dWzC5-nDa_7tw__XFkwITZ_YT3C7urnFVaXGzUIJ0-HfyAI5BikMhPeUG_1nBKkZpSjpabPJiSh_jcNjEXaji6EGURCleQVkNx1mODqbgUc1LtpO0VTeBxowSSjJW_frkzjBw2hA9M)**
+</script></section></section><section  data-markdown><script type="text/template">
+Erinnerung:
+
+Video 1
+
+Video 2
+</script></section><section  data-markdown><script type="text/template">
+**![](https://lh6.googleusercontent.com/Apmofn9Z4sz1UnM_yYrhMEs-6f5Ix_GG1EM_ElVhD909_Dct5cKoSW4U3PvT-sBRoZKnVXk9yuKUUILY6tHH-1ItmgC0BPKIF7J7Ed6YssNsFitU4gBNfBDfpHuwg3gvlOWPYHkNEH0)**
+
+Marc Bielert
+EigenArts-Halle
+[kontakt@eigenarts-halle.de](mailto:kontakt@eigenarts-halle.de)
+0160 - 189 32 70
+</script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+
+		customcontrols: {
+			controls: [
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"controls":true,"progress":true,"slideNumber":true,"navigationMode":"default","transition":"slide","transitionSpeed":"slow"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
