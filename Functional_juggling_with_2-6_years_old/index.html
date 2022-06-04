@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template">
+
+<!-- .slide: class="drop" data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/fjkita1.jpg" alt="" style="position: absolute; left: 0px; top: 24px; height: 1200px; min-height: 1200px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/fjkita2.jpg" alt="" style="position: absolute; left: 403.2px; top: 24px; height: 1200px; min-height: 1200px; width: 384px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/fjkita3.jpg" alt="" style="position: absolute; left: 806.4px; top: 24px; height: 480px; min-height: 480px; width: 1152px; display: flex; flex-direction: column; align-items: center; justify-content: space-evenly" class="reset-margin"></img></p>
+
+
+<div class="has-light-background reset-margin" style="background-color: #FFFFFF00; padding: 30px; box-sizing: border-box; position: absolute; left: 806.4px; top: 576px; height: 420px; min-height: 420px; width: 1094.3999999999999px; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+# Functional Juggling with 2-6 years old<!-- .element: style="font-size: 120px" -->
+</div>
+<div class="has-light-background reset-margin flex-even" style="background-color: #FFFFFF00; position: absolute; left: 768px; top: 1080px; height: 120px; min-height: 120px; width: 1152px; display: flex; flex-direction: row; align-items: center; justify-content: space-evenly" >
+
+# Marc Bielert<!-- .element: style="font-size: 40px" -->
+# EigenArts Halle<!-- .element: style="font-size: 40px" -->
+</div>
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+# Overview
+
+- started developing the concepts 2017
+- original concept (4-6 years)
+- concept for 2-3 years
+- open concept (outside)
+- concept for cognitive development (in dev)
+- concept for development of speech (in dev)
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+# Original concept
+- planned for working with children between 4-6 years
+- main idea is to use narrative storytelling to tie all exercises together
+	- the little witch
+	- holidays in the zoo
+	- dragon pet
+	- pirates
+	- the sleeping beauty
+</script></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+# main stages of a training
+
+- welcome circle, singing a song
+- warm up (depending on the story beeing told)
+- Newton
+- 1.st + 2nd puzzle piece
+- Parcours
+- Wobbleboards
+- 3rd puzzle piece
+- Juggleboard
+- 4th puzzle piece
+- ending circle
+
+- everyone gets a coloring picture
+</script></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+### WarmUp
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0256.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0254.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+### Newton
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/IMG_0296.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0269.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0270.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+### Parcours
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0277.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/IMG_0188.jpg" alt="" style="width: 800px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/IMG_0198.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+### Wobbleboard
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/IMG_0214.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+### Juggleboard
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/IMG_0227.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/IMG_0243.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/IMG_0395.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+### Puzzle
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/IMG_0224.jpg" alt="" style="width: 800px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0305.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0328.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0329.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+### Final Circle
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0335.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSCI0337.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+### Show
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/DSC01019.jpg" alt="" style="width: 1400px"></img></p>
+
+</script></section><section ><section data-markdown><script type="text/template">
+
+# pictures equipment 1
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/20201006_124822.jpg" alt="" ></img></p>
+
+
+</script></section><section data-markdown><script type="text/template">
+### equipment 2
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/20201006_123019.jpg" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+# puzzle 1
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/20201127_183434.jpg" alt="" ></img></p>
+
+</script></section><section data-markdown><script type="text/template">
+### puzzle 2
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/20201127_183448.jpg" alt="" ></img></p>
+
+</script></section></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+# for 2-3 years old
+
+- getting rid of storytelling
+
+- welcome circle, singing a song
+- immidiatly starting with Newton
+- song with movement
+- Parcours + Wobbleboard
+- song with movement
+- Juggleboard
+- ending circle
+- everyone gets a coloring picture
+</script></section><section ><section data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+# open concept (outside)
+
+- after a request to work with 20-30 kids at once in an open setting
+- we are just putting all props out
+	- Juggleboard
+	- Newton
+	- Wobbleboard
+	- Parcour
+- this is more about socializing than working on individual skills
+</script></section><section data-markdown><script type="text/template">
+### outside
+<p style="line-height: 0" class="reset-paragraph image-paragraph"><img src="Bilder/20210615_084630.jpg" alt="" ></img></p>
+
+</script></section></section><section  data-markdown><script type="text/template">
+<!-- .slide: data-background-image="Bilder/blue-abstract-gradient-wave-wallpaper.jpg" -->
+# in development
+## Concept for Cognitive Training + Speech Development
+
+- based on the same core idea to use story-telling and a rhytm of exercises and small rewards 
+- using a mix of pure cognitive exercises and movement related exercises
+- speech development based on play with juggleboard</script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+
+	if(isLight(bgColor)){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+        ],
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+
+		customcontrols: {
+			controls: [
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1200,"margin":0,"controls":true,"controlsTutorial":true,"progress":true,"slideNumber":true,"navigationMode":"default","transition":"slide","transitionSpeed":"slow"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+</html>
