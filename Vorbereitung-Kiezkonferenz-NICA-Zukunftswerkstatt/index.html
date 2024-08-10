@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <title></title>
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" id="theme" />
+    <link rel="stylesheet" href="plugin/highlight/zenburn.css" />
+	<link rel="stylesheet" href="css/layout.css" />
+	<link rel="stylesheet" href="plugin/customcontrols/style.css">
+
+
+
+    <script defer src="dist/fontawesome/all.min.js"></script>
+
+	<script type="text/javascript">
+		var forgetPop = true;
+		function onPopState(event) {
+			if(forgetPop){
+				forgetPop = false;
+			} else {
+				parent.postMessage(event.target.location.href, "app://obsidian.md");
+			}
+        }
+		window.onpopstate = onPopState;
+		window.onmessage = event => {
+			if(event.data == "reload"){
+				window.document.location.reload();
+			}
+			forgetPop = true;
+		}
+
+		function fitElements(){
+			const itemsToFit = document.getElementsByClassName('fitText');
+			for (const item in itemsToFit) {
+				if (Object.hasOwnProperty.call(itemsToFit, item)) {
+					var element = itemsToFit[item];
+					fitElement(element,1, 1000);
+					element.classList.remove('fitText');
+				}
+			}
+		}
+
+		function fitElement(element, start, end){
+
+			let size = (end + start) / 2;
+			element.style.fontSize = `${size}px`;
+
+			if(Math.abs(start - end) < 1){
+				while(element.scrollHeight > element.offsetHeight){
+					size--;
+					element.style.fontSize = `${size}px`;
+				}
+				return;
+			}
+
+			if(element.scrollHeight > element.offsetHeight){
+				fitElement(element, start, size);
+			} else {
+				fitElement(element, size, end);
+			}		
+		}
+
+
+		document.onreadystatechange = () => {
+			fitElements();
+			if (document.readyState === 'complete') {
+				if (window.location.href.indexOf("?export") != -1){
+					parent.postMessage(event.target.location.href, "app://obsidian.md");
+				}
+				if (window.location.href.indexOf("print-pdf") != -1){
+					let stateCheck = setInterval(() => {
+						clearInterval(stateCheck);
+						window.print();
+					}, 250);
+				}
+			}
+	};
+
+
+        </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides"><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: -10%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<img src="Bilder/abhuva_background_picture_for_a_presentation_about_a_network_fo_6c1e7838-65c0-4668-ae7a-a493a4312f00.png" alt="" style="width: 1300px; object-fit: fill">
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<img src="Bilder/Titel-Background-01.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 25px; box-sizing: border-box; position: absolute; left: 50%; top: -30%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="middle">
+
+**NICA e.V.**<!-- .element: style="font-size: 110px" --> <br></br>
+**Netzwerk für inklusive Bewegungspädagogik**<!-- .element: style="font-size: 50px" -->
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 22%; top: 40%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="middle">
+
+**Zukunftswerkstatt**<!-- .element: style="font-size: 80px" --> <br></br>
+</div>
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 22%; top: 43%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="middle">
+
+**Gemeinsam die Zukunft gestalten**<!-- .element: style="font-size: 45px" -->
+</div>
+
+<img src="Bilder/nica-only-small-transparent.png" alt="" style="position: absolute; left: 70%; top: 45%; height: 36%; width: 20%; display: flex; flex-direction: column; align-items: center; justify-content: center; object-fit: fill">
+</div>
+
+<aside class="notes"><p>Marc</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 20%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+<img src="Bilder/abhuva_background_picture_for_a_presentation_about_a_network_fo_dc02f2eb-a54c-4361-87ed-aec21cf90a38.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<img src="Bilder/backdrop-content-01.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; position: absolute; left: 5%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="block">
+
+**Wir wollen...**
+- Über unsere Arbeit informieren
+- Partnerschaften und Kooperationen anstoßen
+- Finanzierungsoptionen zu erörtern.
+</div>
+
+
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFFFF; padding: 0px; box-sizing: border-box; position: absolute; left: 100%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+</div>
+</div>
+
+<aside class="notes"><p>Marc</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/side-bar-01.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 25%; top: -20%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/blob-01.png" alt="" style="object-fit: scale-down">
+
+</div>
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 30%; top: -20%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+**2017**
+</div>
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 45%; top: -20%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+inklusive Zirkusprojekte
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 75%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/blob-02.png" alt="" style="object-fit: scale-down">
+
+</div>
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 80%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+**2020**
+</div>
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 40%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+internationale Projekte (Erasmus+)
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 25%; top: 30%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/blob-03.png" alt="" style="object-fit: scale-down">
+
+</div>
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 30%; top: 30%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+**2023**
+</div>
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 45%; top: 30%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+Gründung des Vereines
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 40%; top: -40%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+**Wo kommen wir her**<!-- .element: style="font-size: 80px" -->
+</div>
+</div>
+
+<aside class="notes"><p>Marc</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 20%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+<img src="Bilder/abhuva_background_picture_for_a_presentation_about_a_network_fo_70126b06-b954-46f2-a145-83d5a073403f.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<img src="Bilder/backdrop-content-01.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; position: absolute; left: 5%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="block">
+
+**Was zeichnet uns aus**<!-- .element: style="font-size: 80px" -->
+- Inklusive Bewegungspädagogik
+- Inklusion in Projekten und Verein
+- Weiterentwicklung unserer Methoden
+</div>
+
+
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFFFF; padding: 0px; box-sizing: border-box; position: absolute; left: 100%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+</div>
+</div>
+
+<aside class="notes"><p>Peter</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; transform: rotate(180deg); position: absolute; left: 70%; top: 0%; height: 100%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/side-bar-01.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 5%; top: 10%; height: 30%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/blob-01.png" alt="" style="width: 180px; object-fit: fill">
+
+</div>
+<div class="has-light-background" style="background-color: #FFFF0000; padding: 0px; box-sizing: border-box; position: absolute; left: 20%; top: 20%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+Entwicklung Weiterbildung<!-- .element: style="font-size: 60px" -->
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 5%; top: 30%; height: 30%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/blob-02.png" alt="" style="width: 200px; object-fit: fill">
+
+</div>
+<div class="has-light-background" style="background-color: #FFFF0000; padding: 0px; box-sizing: border-box; position: absolute; left: 20%; top: 40%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+Inklusive Zirkusprojekte<!-- .element: style="font-size: 60px" -->
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 5%; top: 50%; height: 30%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/blob-03.png" alt="" style="width: 230px; object-fit: fill">
+
+</div>
+<div class="has-light-background" style="background-color: #FFFF0000; padding: 0px; box-sizing: border-box; position: absolute; left: 20%; top: 60%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+Jonglier-Convention "Tohuwabohu" 2024<!-- .element: style="font-size: 60px" -->
+</div>
+
+<div class="has-light-background" style="background-color: #FFFF0000; padding: 0px; box-sizing: border-box; transform: rotate(135deg); position: absolute; left: -2%; top: 80%; height: 20%; width: 20%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/blob-02.png" alt="" style="width: 200px; object-fit: fill">
+
+</div>
+<div class="has-light-background" style="background-color: #FFFF0000; padding: 0px; box-sizing: border-box; position: absolute; left: 20%; top: 80%; height: 10%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+Regionale und internationale Vernetzung<!-- .element: style="font-size: 60px" -->
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 40%; top: -40%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+**Aktueller Stand**<!-- .element: style="font-size: 80px" -->
+</div>
+</div>
+
+<aside class="notes"><p>Peter</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 20%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<div class="block">
+
+<img src="Bilder/abhuva_background_picture_for_a_presentation_about_a_network_fo_a8489d21-f412-4eed-a25f-d4971ef2622d.png" alt="" style="width: 1300px; object-fit: fill">
+
+</div>
+
+
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center" align="center">
+
+<img src="Bilder/backdrop-content-01.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFF00; position: absolute; left: 5%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center" >
+
+<div class="block">
+
+**Wo wollen wir hin**
+- Angebote für weitere Zielgruppen
+- Weiterbildungen für inklusive Bewegungspädagogik
+- Inklusive Beteiligungsmöglichkeiten im Verein und Netzwerk
+</div>
+
+
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFFFFFF; padding: 0px; box-sizing: border-box; position: absolute; left: 100%; top: 0%; height: 100%; width: 50%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+</div>
+</div>
+
+<aside class="notes"><p>Peter</p>
+</aside></script></section><section  data-markdown><script type="text/template"><!-- .slide: class="drop" -->
+<div class="" style="position: absolute; left: 0px; top: 0px; height: 1080px; width: 1920px; min-height: 1080px; display: flex; flex-direction: column; align-items: center; justify-content: center" absolute="true">
+
+<div class="has-light-background" style="background-color: #FFFFFF00; padding: 0px; box-sizing: border-box; position: absolute; left: 0%; top: 0%; height: 100%; width: 100%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+<img src="Bilder/10.png" alt="" style="object-fit: scale-down">
+
+</div>
+
+<div class="has-light-background" style="background-color: #FFFF0000; padding: 0px; box-sizing: border-box; position: absolute; left: 20%; top: 0%; height: 50%; width: 60%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+**Die Zukunftswerkstatt**<!-- .element: style="font-size: 80px" -->
+- Vorstellung unserer Arbeit und Vision
+- Andockstellen, neue Partnerschaften und Kooperationsmodelle entwickeln
+- Finanzierungsoptionen finden
+</div>
+
+<div class="has-light-background" style="background-color: #FFFF0000; padding: 0px; box-sizing: border-box; position: absolute; left: 70%; top: 50%; height: 50%; width: 30%; display: flex; flex-direction: column; align-items: flex-start; justify-content: space-evenly" align="left">
+
+**Datum**: 24.10 von 09:00 - 12:00 <br></br>
+**Ort**: Pusteblume <br></br>
+Es gibt 30 Plätze
+</div>
+</div>
+
+<aside class="notes"><p>Marc</p>
+</aside></script></section></div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script src="plugin/zoom/zoom.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/math/math.js"></script>
+	<script src="plugin/mermaid/mermaid.js"></script>
+	<script src="plugin/chart/chart.min.js"></script>
+	<script src="plugin/chart/plugin.js"></script>
+	<script src="plugin/menu/menu.js"></script>
+	<script src="plugin/customcontrols/plugin.js"></script>
+	<script src="plugin/elapsed-time-bar/elapsed-time-bar.js"></script>
+
+    <script>
+      function extend() {
+        var target = {};
+        for (var i = 0; i < arguments.length; i++) {
+          var source = arguments[i];
+          for (var key in source) {
+            if (source.hasOwnProperty(key)) {
+              target[key] = source[key];
+            }
+          }
+        }
+        return target;
+      }
+
+	  function isLight(color) {
+		let hex = color.replace('#', '');
+
+		// convert #fff => #ffffff
+		if(hex.length == 3){
+			hex = `${hex[0]}${hex[0]}${hex[1]}${hex[1]}${hex[2]}${hex[2]}`;
+		}
+
+		const c_r = parseInt(hex.substr(0, 2), 16);
+		const c_g = parseInt(hex.substr(2, 2), 16);
+		const c_b = parseInt(hex.substr(4, 2), 16);
+		const brightness = ((c_r * 299) + (c_g * 587) + (c_b * 114)) / 1000;
+		return brightness > 155;
+	}
+
+	var bgColor = getComputedStyle(document.documentElement).getPropertyValue('--r-background-color').trim();
+	var isLight = isLight(bgColor);
+
+	if(isLight){
+		document.body.classList.add('has-light-background');
+	} else {
+		document.body.classList.add('has-dark-background');
+	}
+
+      // default options to init reveal.js
+      var defaultOptions = {
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'default', // none/fade/slide/convex/concave/zoom
+        plugins: [
+          RevealMarkdown,
+          RevealHighlight,
+          RevealZoom,
+          RevealNotes,
+          RevealMath.MathJax3,
+		  RevealMermaid,
+		  RevealChart,
+		  RevealCustomControls,
+		  RevealMenu,
+		  ElapsedTimeBar
+        ],
+
+
+    	allottedTime: 120 * 1000,
+
+		mathjax3: {
+			mathjax: 'plugin/math/mathjax/tex-mml-chtml.js',
+		},
+		markdown: {
+		  gfm: true,
+		  mangle: true,
+		  pedantic: false,
+		  smartLists: false,
+		  smartypants: false,
+		},
+
+		mermaid: {
+			theme: isLight ? 'default' : 'dark',
+		},
+
+		customcontrols: {
+			controls: [
+			]
+		},
+		menu: {
+			loadIcons: false
+		}
+      };
+
+      // options from URL query string
+      var queryOptions = Reveal().getQueryHash() || {};
+
+      var options = extend(defaultOptions, {"width":1920,"height":1080,"margin":0,"controls":true,"controlsTutorial":true,"progress":true,"slideNumber":true,"navigationMode":"default","transition":"slide","transitionSpeed":"slow"}, queryOptions);
+    </script>
+
+    <script>
+      Reveal.initialize(options);
+    </script>
+  </body>
+
+  <!-- created with Advanced Slides -->
+</html>
